@@ -11,6 +11,8 @@ contract StorageFactory {
     }
 
     function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
+		// If we want to interact with other contracts
+		// We need to have the address and ABI
         SimpleStorage simpleStorage = simpleStorageArray[_simpleStorageIndex];
         simpleStorage.store(_simpleStorageNumber);
     }
